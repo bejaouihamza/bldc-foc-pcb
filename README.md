@@ -59,15 +59,15 @@ The design is organized into clear functional blocks:
 ### FOC Control Loop
 
 ```
-Speed Ref (ω*) → Speed PI → Iq*
-                              ↓
+                Speed Ref (ω*) → Speed PI → Iq*
+                                ↓
                     ┌─────────────────┐
-Id*=0 → Current PI │  Inverse Park   │ → Vα,Vβ → SVPWM → DRV8308 → 3-Phase Bridge → Motor
-        Iq → Current PI │  (d-q → α-β)   │         ↑
+Id*=0 → Current PI  │  Inverse Park   │ → Vα,Vβ → SVPWM → DRV8308 → 3-Phase Bridge → Motor
+  Iq → Current PI   │  (d-q → α-β)    │         ↑
                     └─────────────────┘         │
-                           ↑                    │
-    Hall → Estimator → θ,ω  │                    │
-           ↑                │                    │
+                            ↑                   │
+  Hall → Estimator → θ,ω    │                   │
+           ↑                │                   │
     Current Sense → Clarke → Park → Id,Iq (feedback)
 ```
 
@@ -199,12 +199,17 @@ See the **[live project page](https://bejaouihamza.github.io/bldc-foc-pcb/)** fo
 
 ```
 bldc-foc-pcb/
-├── index.html              # Landing page (GitHub Pages)
-├── pcb-layout-top.png      # Top layer copper layout
-├── pcb-render.png          # 3D render
-├── schematic-full.png      # Complete KiCad schematic
-├── README.md               # This file
-└── bldc&foc motor controller.pdf  # Original schematic PDF
+├── README.md                          # Project overview and documentation
+├── index.html                         # GitHub Pages project page
+├── pcb-layout-top.png                 # Top-layer PCB layout
+├── pcb-render.png                     # 3D render of the assembled PCB
+├── schematic-full.png                 # Complete circuit schematic
+├── bldc&foc motor controller.zip      # Complete KiCad project source
+├── bldcfoc_motor_controller.zip       # Manufacturing files (Gerbers, drill, etc.)
+├── bom.csv                            # Bill of Materials for assembly
+├── designators.csv                    # Reference designator list
+├── netlist.ipc                        # IPC-D-356 netlist for verification
+└── positions.csv                      # Pick-and-place coordinates for SMT assembly
 ```
 
 ---
