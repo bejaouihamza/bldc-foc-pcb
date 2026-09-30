@@ -4,6 +4,8 @@
 
 **[🌐 Live Project Page](https://bejaouihamza.github.io/bldc-foc-pcb/)**
 
+[Kicanvas](https://kicanvas.org/?repo=https%3A%2F%2Fgithub.com%2Fsamuk%2Fbldc-foc-pcb%2Ftree%2Fmain%2Fkicad)
+
 ---
 
 ## Overview
